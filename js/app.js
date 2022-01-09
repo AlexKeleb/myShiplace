@@ -138,14 +138,12 @@
         t.addEventListener("blur", function (r) {
           t.placeholder = e;
         }),
-        setInterval(() => {
-          setTimeout(() => {
-            t.focus();
-          }, 3e3),
-            setTimeout(() => {
-              t.blur();
-            }, 6e3);
-        }, 7e3);
+        setTimeout(() => {
+          t.focus();
+        }, 3e3),
+        setTimeout(() => {
+          t.blur();
+        }, 6e3);
     }),
     document.addEventListener("DOMContentLoaded", function (t) {
       const e = document.querySelector(".header__burger"),
