@@ -11,7 +11,7 @@
       (this.config = Object.assign({ logging: !0 }, t)),
         this.observer,
         !document.documentElement.classList.contains("watcher") &&
-          this.scrollWatcherRun();
+        this.scrollWatcherRun();
     }
     scrollWatcherUpdate() {
       this.scrollWatcherRun();
@@ -29,9 +29,8 @@
         ),
           e(
             Array.from(t).map(function (t) {
-              return `${
-                t.dataset.watchRoot ? t.dataset.watchRoot : null
-              }|${t.dataset.watchMargin ? t.dataset.watchMargin : "0px"}|${t.dataset.watchThreshold ? t.dataset.watchThreshold : 0}`;
+              return `${t.dataset.watchRoot ? t.dataset.watchRoot : null
+                }|${t.dataset.watchMargin ? t.dataset.watchMargin : "0px"}|${t.dataset.watchThreshold ? t.dataset.watchThreshold : 0}`;
             })
           ).forEach((e) => {
             let r = e.split("|"),
@@ -59,11 +58,11 @@
         (document.querySelector(t.root)
           ? (e.root = document.querySelector(t.root))
           : "null" !== t.root &&
-            this.scrollWatcherLogging(
-              `Эмм... родительского объекта ${t.root} нет на странице`
-            ),
-        (e.rootMargin = t.margin),
-        !(t.margin.indexOf("px") < 0 && t.margin.indexOf("%") < 0))
+          this.scrollWatcherLogging(
+            `Эмм... родительского объекта ${t.root} нет на странице`
+          ),
+          (e.rootMargin = t.margin),
+          !(t.margin.indexOf("px") < 0 && t.margin.indexOf("%") < 0))
       ) {
         if ("prx" === t.threshold) {
           t.threshold = [];
@@ -88,12 +87,12 @@
     scrollWatcherIntersecting(t, e) {
       t.isIntersecting
         ? (!e.classList.contains("_watcher-view") &&
-            e.classList.add("_watcher-view"),
+          e.classList.add("_watcher-view"),
           this.scrollWatcherLogging(
             `Я вижу ${e.classList}, добавил класс _watcher-view`
           ))
         : (e.classList.contains("_watcher-view") &&
-            e.classList.remove("_watcher-view"),
+          e.classList.remove("_watcher-view"),
           this.scrollWatcherLogging(
             `Я не вижу ${e.classList}, убрал класс _watcher-view`
           ));
@@ -114,8 +113,8 @@
       const r = t.target;
       this.scrollWatcherIntersecting(t, r),
         r.hasAttribute("data-watch-once") &&
-          t.isIntersecting &&
-          this.scrollWatcherOff(r, e),
+        t.isIntersecting &&
+        this.scrollWatcherOff(r, e),
         document.dispatchEvent(
           new CustomEvent("watcherCallback", { detail: { entry: t } })
         );
@@ -139,13 +138,11 @@
         t.addEventListener("blur", function (r) {
           t.placeholder = e;
         }),
-        setInterval(() => {
-          setTimeout(() => {
-            t.focus();
-          }, 3e3),
-            setTimeout(() => {
-              t.blur();
-            }, 6e3);
+        setTimeout(() => {
+          t.focus();
+        }, 5e3),
+        setTimeout(() => {
+          t.blur();
         }, 7e3);
     }),
     document.addEventListener("DOMContentLoaded", function (t) {
@@ -180,18 +177,18 @@
       mainForm.addEventListener("submit", async function (o) {
         o.preventDefault(),
           0 ===
-          (function (o) {
-            let n = 0,
-              c = document.querySelectorAll("._req");
-            for (let o = 0; o < c.length; o++) {
-              const s = c[o];
-              e(s),
-                s.classList.contains("_email")
-                  ? r(s) && (t(s), n++)
-                  : "" === s.value && (t(s), n++);
-            }
-            return n;
-          })(mainForm)
+            (function (o) {
+              let n = 0,
+                c = document.querySelectorAll("._req");
+              for (let o = 0; o < c.length; o++) {
+                const s = c[o];
+                e(s),
+                  s.classList.contains("_email")
+                    ? r(s) && (t(s), n++)
+                    : "" === s.value && (t(s), n++);
+              }
+              return n;
+            })(mainForm)
             ? mainForm.reset()
             : (alert("Заполните обязательные поля"), mainFormInput.focus());
       });
