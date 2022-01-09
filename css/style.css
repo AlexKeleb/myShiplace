@@ -106,32 +106,32 @@ h6 {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
-[class*=__container] {
+[class*="__container"] {
   margin: 0 auto;
   max-width: 71.875rem;
   box-sizing: content-box;
 }
 @media (max-width: 73.125em) {
-  [class*=__container] {
+  [class*="__container"] {
     max-width: 60.625rem;
   }
 }
 @media (max-width: 61.99875em) {
-  [class*=__container] {
+  [class*="__container"] {
     max-width: 46.875rem;
   }
 }
 @media (max-width: 47.99875em) {
-  [class*=__container] {
+  [class*="__container"] {
     max-width: none;
     padding: 0 0.625rem;
   }
 }
 
-[class*=-ibg] {
+[class*="-ibg"] {
   position: relative;
 }
-[class*=-ibg] img {
+[class*="-ibg"] img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -140,7 +140,7 @@ h6 {
   object-fit: cover;
 }
 
-[class*=-ibg_contain] img {
+[class*="-ibg_contain"] img {
   object-fit: contain;
 }
 
@@ -352,7 +352,7 @@ body {
   }
 
   .header__burger:before,
-.header__burger::after {
+  .header__burger::after {
     content: "";
     position: absolute;
     background-color: #000;
@@ -404,15 +404,15 @@ body {
   }
 
   .header__list,
-.user-block,
-.user-block__link,
-.user-block__button {
+  .user-block,
+  .user-block__link,
+  .user-block__button {
     display: block;
   }
 
   .header-menu__item,
-.user-block__link,
-.user-block__button {
+  .user-block__link,
+  .user-block__button {
     margin-bottom: 20px;
     width: 100%;
     min-height: 50px;
@@ -450,20 +450,20 @@ body {
   }
 
   .header-menu__item:hover,
-.user-block__link:hover {
+  .user-block__link:hover {
     text-decoration: none;
     transform: scale(1);
   }
 
   .header-menu__item:active,
-.user-block__link:active {
+  .user-block__link:active {
     text-decoration: none;
     transform: scale(1);
     background-color: black;
   }
 
   .header-menu__item:before,
-.user-block__link:before {
+  .user-block__link:before {
     width: 0;
   }
 }
@@ -482,8 +482,8 @@ body {
   }
 
   .header-menu__item,
-.user-block__link,
-.user-block__button {
+  .user-block__link,
+  .user-block__button {
     margin-bottom: 35px;
     width: 100%;
     min-height: 50px;
@@ -639,7 +639,7 @@ body {
 }
 @media (max-width: 1172px) {
   .main__form {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 513px) {
@@ -659,7 +659,7 @@ body {
   border-radius: 50px;
 }
 
-input[type=text] {
+input[type="text"] {
   padding: 15px 25px;
   flex: 1 1 100%;
   font-weight: 700;
@@ -668,7 +668,7 @@ input[type=text] {
   border-radius: 50px;
 }
 
-input[type=text]::placeholder {
+input[type="text"]::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -714,7 +714,7 @@ input[type=text]::placeholder {
     max-width: 100%;
   }
 
-  input[type=text] {
+  input[type="text"] {
     display: block;
     width: 100%;
     margin-bottom: 20px;
@@ -727,7 +727,7 @@ input[type=text]::placeholder {
   }
 }
 @media (max-width: 29.99875em) {
-  input[type=text] {
+  input[type="text"] {
     margin-bottom: 10px;
   }
 }
