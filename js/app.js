@@ -138,11 +138,13 @@
         t.addEventListener("blur", function (r) {
           t.placeholder = e;
         }),
-        setTimeout(() => {
-          t.focus();
-        }, 5e3),
-        setTimeout(() => {
-          t.blur();
+        setInterval(() => {
+          setTimeout(() => {
+            t.focus();
+          }, 3e3),
+            setTimeout(() => {
+              t.blur();
+            }, 6e3);
         }, 7e3);
     }),
     document.addEventListener("DOMContentLoaded", function (t) {
