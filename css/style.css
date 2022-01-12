@@ -106,6 +106,14 @@ h6 {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 [class*="__container"] {
   margin: 0 auto;
   max-width: 71.875rem;
